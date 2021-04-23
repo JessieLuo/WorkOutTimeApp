@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">WorkOut Time App</string>
+    <string name="you_spent_00_00_on_push_ups_last_time">You spent 00:00 on push ups last time</string>
+    <string name="edit_your_work_type">Edit your work type:</string>
+    <string name="name">Name</string>
+    <string name="startButton">TODO</string>
+    <string name="pauseButton">TODO</string>
+    <string name="stopButton">TODO</string>
+    <!--<string name="you_spent_00_00_on_push_ups_last_time">You spent 00:00 on push ups last time</string>
+    <string name="edit_your_work_type">Edit your work type:</string>
+    <string name="name">Name</string>-->
+</resources>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/showText"
+        android:layout_width="337dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginBottom="64dp"
+        android:gravity="center_horizontal"
+        android:text="@string/you_spent_00_00_on_push_ups_last_time"
+        android:textAlignment="center"
+        android:textColor="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Chronometer
+        android:id="@+id/timeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="81dp"
+        android:textColor="@color/black"
+        android:textSize="20pt"
+        android:format="%s"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showText" />
+
+    <ImageButton
+        android:id="@+id/startButton"
+        android:layout_width="96dp"
+        android:layout_height="82dp"
+        android:scaleType="fitXY"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginRight="21dp"
+        app:layout_constraintEnd_toStartOf="@+id/pauseButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeText"
+        app:srcCompat="@drawable/start"
+        android:onClick="onTimeClick"
+        android:contentDescription="@string/startButton" />
+
+    <ImageButton
+        android:id="@+id/pauseButton"
+        android:layout_width="103dp"
+        android:layout_height="83dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/stopButton"
+        app:layout_constraintTop_toBottomOf="@+id/timeText"
+        app:srcCompat="@drawable/pause"
+        android:onClick="onTimeClick"
+        android:contentDescription="@string/pauseButton" />
+
+    <ImageButton
+        android:id="@+id/stopButton"
+        android:layout_width="101dp"
+        android:layout_height="85dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeText"
+        app:srcCompat="@drawable/stop"
+        android:onClick="onTimeClick"
+        android:contentDescription="@string/stopButton" />
+
+    <TextView
+        android:id="@+id/hintText"
+        android:layout_width="191dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="126dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="156dp"
+        android:gravity="center"
+        android:text="@string/edit_your_work_type"
+        android:textAlignment="center"
+        android:textColor="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/enterEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pauseButton" />
+
+    <EditText
+        android:id="@+id/enterEditText"
+        android:layout_width="144dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="126dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="148dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pauseButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
